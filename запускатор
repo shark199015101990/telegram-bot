@@ -1,1 +1,4 @@
 docker run -d --name postgres   -p 5432:5432   -e POSTGRES_PASSWORD="22Gjvbljhf@@"   -v /home/serega/docker/postgres-data:/var/lib/postgresql/data   postgres-image
+
+docker run -d --name telegram-bot -e BOT_TOKEN="7271306249:AAGV_ih2ZsLoPveheV1BQR0N6TzsgacAmm0" telegram-bot
+docker run -d --name telegram-bot -e BOT_TOKEN="7271306249:AAGV_ih2ZsLoPveheV1BQR0N6TzsgacAmm0" -v $(pwd):/app  telegram-bot
