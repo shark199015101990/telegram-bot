@@ -8,4 +8,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-CMD ["sh", "-c", "watchmedo auto-restart -d . -p '*.py' -- python bot.py"]
+CMD ["python", "bot.py"]

@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  bot:
+    build: .
+    container_name: telegram-bot
+    environment:
+      BOT_TOKEN: ${BOT_TOKEN}
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_NAME: ${DB_NAME}
+      DB_HOST: 192.168.68.114
+      DB_PORT: ${DB_PORT}
+    volumes:
+      - .:/app  # Для горячей замены кода
+    restart: always
